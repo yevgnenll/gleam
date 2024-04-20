@@ -6,7 +6,6 @@ pub fn square_of_sum(n: Int) -> Int {
 fn sum(n: Int) -> Int {
   case n {
     n if n >= 1 -> sum(n - 1) + n
-    0 -> 0
     _ -> 0
   }
 }
@@ -14,7 +13,6 @@ fn sum(n: Int) -> Int {
 pub fn sum_of_squares(n: Int) -> Int {
   case n {
     n if n >= 1 -> sum_of_squares(n - 1) + n * n
-    0 -> 0
     _ -> 0
   }
 }
