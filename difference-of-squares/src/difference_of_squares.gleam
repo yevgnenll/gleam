@@ -1,11 +1,24 @@
 pub fn square_of_sum(n: Int) -> Int {
-  todo as "Implement this function"
+  let sum = sum(n)
+  sum * sum
+}
+
+fn sum(n: Int) -> Int {
+  case n {
+    n if n >= 1 -> sum(n - 1) + n
+    0 -> 0
+    _ -> 0
+  }
 }
 
 pub fn sum_of_squares(n: Int) -> Int {
-  todo as "Implement this function"
+  case n {
+    n if n >= 1 -> sum_of_squares(n - 1) + n * n
+    0 -> 0
+    _ -> 0
+  }
 }
 
 pub fn difference(n: Int) -> Int {
-  todo as "Implement this function"
+  square_of_sum(n) - sum_of_squares(n)
 }
